@@ -10,17 +10,6 @@ public class User {
         this.username = username;
         this.password = password;
     }
-    //Getters methods
-    public Integer getId() {
-        return id;
-    }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
 
 }
