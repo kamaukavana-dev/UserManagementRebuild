@@ -30,16 +30,7 @@ public class AuthService {
         return users;
     }
 
-    public User updateUser(int id, User updatedUser) {
-        for (User user : users) {
-            if (user.getId() == id) {
-                user.setUsername(updatedUser.getUsername());
-                user.setPassword(updatedUser.getPassword());
-                return user;
-            }
-        }
-        throw new RuntimeException("User not found");
-    }
+
 
 
 
