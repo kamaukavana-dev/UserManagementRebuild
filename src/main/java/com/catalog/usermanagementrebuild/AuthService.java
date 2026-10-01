@@ -16,19 +16,7 @@ public class AuthService {
         return "User registered successfully!";
     }
 
-    public String login(User user) {
-        for (User user1 : users) {
-            if (user1.getUsername().equalsIgnoreCase(user.getUsername()) &&
-                    user1.getPassword().equalsIgnoreCase(user.getPassword())) {
-                return "Login successfully!";
-            }
-        }
-        return "Invalid username or password";
-    }
 
-    public List<User> getUsers() {
-        return users;
-    }
 
 
 
