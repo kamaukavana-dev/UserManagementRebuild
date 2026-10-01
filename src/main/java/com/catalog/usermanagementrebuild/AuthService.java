@@ -41,14 +41,6 @@ public class AuthService {
         throw new RuntimeException("User not found");
     }
 
-    public String deleteUser(int id) {
-        for (User user : users) {
-            if (user.getId() == id) {
-                users.remove(user);
-                return "User deleted successfully";
-            }
-        }
-        throw new RuntimeException("User not found");
-    }
+
 
 }
