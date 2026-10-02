@@ -50,21 +50,5 @@ public class AuthService {
         }
         throw new RuntimeException("User not found");
     }
-    public User patchUser(int id, User updatedUser) {
-        for (User user : users) {
-            if (user.getId() == id) {
 
-                if (updatedUser.getUsername() != null) {
-                    user.setUsername(updatedUser.getUsername());
-                }
-
-                if (updatedUser.getPassword() != null) {
-                    user.setPassword(updatedUser.getPassword());
-                }
-
-                return user;
-            }
-        }
-        throw new RuntimeException("User not found");
-    }
 }
