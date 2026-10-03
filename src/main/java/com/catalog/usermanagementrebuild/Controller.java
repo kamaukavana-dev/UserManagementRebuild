@@ -11,12 +11,33 @@ public class Controller {
         this.authService = authService;
     }
 
+    @GetMapping("/users")
+    public List<User> getUsers() {
+        return authService.getUsers();
+    }
 
+    @PostMapping("/register")
+    public String register(@RequestBody User user) {
+        return authService.register(user);
+    }
 
+    @PostMapping("/login")
+    public String login(@RequestBody User user) {
+        return authService.login(user);
+    }
 
+    @PutMapping("/users/{id}")
+    public User update(@PathVariable int id, @RequestBody User user) {
+        return authService.updateUser(id, user);
+    }
 
+    @PatchMapping("/users/{id}")
+    public User patch(@PathVariable int id, @RequestBody User user) {
+        return authService.patchUser(id, user);
+    }
 
-}
-
-
+    @DeleteMapping("/users/{id}")
+    public String delete(@PathVariable int id) {
+        return authService.deleteUser(id);
+    }
 }
