@@ -31,10 +31,7 @@ public class Controller {
         return authService.updateUser(id, user);
     }
 
-    @PatchMapping("/users/{id}")
-    public User patch(@PathVariable int id, @RequestBody User user) {
-        return authService.patchUser(id, user);
-    }
+}
 
 
 }
