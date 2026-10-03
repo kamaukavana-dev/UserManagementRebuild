@@ -26,10 +26,6 @@ public class Controller {
         return authService.login(user);
     }
 
-    @PutMapping("/users/{id}")
-    public User update(@PathVariable int id, @RequestBody User user) {
-        return authService.updateUser(id, user);
-    }
 
 }
 
