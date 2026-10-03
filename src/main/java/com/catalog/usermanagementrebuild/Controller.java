@@ -11,10 +11,7 @@ public class Controller {
         this.authService = authService;
     }
 
-    @GetMapping("/users")
-    public List<User> getUsers() {
-        return authService.getUsers();
-    }
+
 
 
 
