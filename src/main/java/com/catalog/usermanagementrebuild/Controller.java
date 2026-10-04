@@ -31,13 +31,5 @@ public class Controller {
         return authService.updateUser(id, user);
     }
 
-    @PatchMapping("/users/{id}")
-    public User patch(@PathVariable int id, @RequestBody User user) {
-        return authService.patchUser(id, user);
-    }
 
-    @DeleteMapping("/users/{id}")
-    public String delete(@PathVariable int id) {
-        return authService.deleteUser(id);
-    }
 }
