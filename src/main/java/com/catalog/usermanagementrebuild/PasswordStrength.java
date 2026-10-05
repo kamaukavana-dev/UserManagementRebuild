@@ -55,14 +55,7 @@ public class PasswordStrength {
         int score = 0;
 
         // Length criteria.
-        if (password.length() >= 8) {
-            score++;
-        }
-        if (password.length() >= 12) {
-            score++;
-        }
 
-        // Character-class diversity (adds up to 2 points).
 
 
 
