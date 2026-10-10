@@ -63,6 +63,20 @@ public class PasswordStrength {
         }
 
         // Character-class diversity (adds up to 2 points).
+        if (classes >= 2) {
+            score++;
+        }
+        if (classes >= 4) {
+            score++;
+        }
 
-
+        // Clamp to [0, 4].
+        if (score < 0) {
+            score = 0;
+        }
+        if (score > 4) {
+            score = 4;
+        }
+        return score;
+    }
 }
